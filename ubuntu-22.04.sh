@@ -15,10 +15,10 @@ BLANK='\033[0m';
 #uname_s=$(uname -s)
 #uname_m=$(uname -m)
 
+# env setup
 printf "${GREEN}>>> 1. env setup >>>${BLANK}\n";
 
 cp /etc/apt/sources.list /etc/apt/sources.list.copy
-
 sed -i "s@https://.*archive.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g" /etc/apt/sources.list
 
 sudo apt update -y
@@ -26,7 +26,6 @@ sudo apt full-upgrade -y
 sudo apt autoremove -y
 
 printf "${GREEN}<<< 1. env setup completed <<<${BLANK}\n";
-
 
 # pkgs
 printf "${GREEN}>>> 2. installing packages >>>${BLANK}\n";
@@ -47,7 +46,10 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 printf "${GREEN}<<< 3. cmd environment installed <<<${BLANK}\n";
 
+# conda env
+printf "${GREEN}>>> 4. installing conda env >>>${BLANK}\n"
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+zsh Miniforge3-$(uname)-$(uname -m).sh
+printf "${GREEN}<<< 4. conda env installed <<<${BLANK}\n"
 
-
-
-sudo reboot
+#sudo reboot
