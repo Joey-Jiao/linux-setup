@@ -49,7 +49,10 @@ printf "${GREEN}<<< 3. cmd environment installed <<<${BLANK}\n";
 # conda env
 printf "${GREEN}>>> 4. installing conda env >>>${BLANK}\n"
 curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
-zsh Miniforge3-$(uname)-$(uname -m).sh
+zsh Miniforge3-$(uname)-$(uname -m).sh -b -p "${HOME}/conda"
+source "${HOME}/conda/etc/profile.d/conda.sh"
+conda activate
+conda -v
 printf "${GREEN}<<< 4. conda env installed <<<${BLANK}\n"
 
 #sudo reboot
