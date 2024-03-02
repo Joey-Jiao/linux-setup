@@ -18,14 +18,12 @@ BLANK='\033[0m';
 printf "${GREEN}>>> 1. env setup >>>${BLANK}\n";
 
 cp /etc/apt/sources.list /etc/apt/sources.list.copy
+
 sed -i "s@https://.*archive.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g" /etc/apt/sources.list
 
 sudo apt update -y
 sudo apt full-upgrade -y
 sudo apt autoremove -y
-sudo apt install netselect -y
-
-mirror_list=$(netselect -s 1 -t 20 $mirror_list | cut -d' ' -f2)
 
 printf "${GREEN}<<< 1. env setup completed <<<${BLANK}\n";
 

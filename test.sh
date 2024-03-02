@@ -10,9 +10,11 @@ uname_n=$(uname -n)
 
 printf "${GREEN}>>> installing cmd environment >>>${BLANK}\n";
 
-read -p ">>> enter corresponding username >>>" target_user;
-if id -u "$target_user" >/dev/null 2>&1; then
-    printf "${GREEN}>>> proceeding to setup >>>${BLANK}\n";
-else
-    exit 1;
-fi
+#read -p ">>> enter corresponding username >>>" target_user;
+#if id -u "$target_user" >/dev/null 2>&1; then
+#    printf "${GREEN}>>> proceeding to setup >>>${BLANK}\n";
+#else
+#    exit 1;
+#fi
+
+apt upgrade -y
