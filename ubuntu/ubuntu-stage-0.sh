@@ -20,7 +20,7 @@ printf "${GREEN}<<< 1. env setup completed <<<${BLANK}\n";
 
 # pkgs
 printf "${GREEN}>>> 2. installing packages >>>${BLANK}\n";
-sudo apt install docker curl nfs-common preload -y
+sudo apt install vim neovim docker curl nfs-common preload -y
 printf "${GREEN}<<< 2. packages installed <<<${BLANK}\n";
 
 
@@ -31,15 +31,6 @@ sleep 2
 #chsh -s /bin/zsh
 sudo usermod -s /usr/bin/zsh $(whoami)
 printf "${GREEN}<<< 3. cmd environment installed <<<${BLANK}\n";
-
-
-# language env
-#printf "${GREEN}>>> 4. specific env setup >>>${BLANK}\n"
-#zsh ./ubuntu-22.04-c.sh
-#zsh ./ubuntu-22.04-conda.sh
-#zsh ./ubuntu-22.04-n.sh
-#zsh ./ubuntu-22.04-java.sh
-#printf "${GREEN}<<< 4. specific env setup completed <<<${BLANK}\n"
 
 
 #sudo reboot
