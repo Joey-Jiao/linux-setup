@@ -5,16 +5,6 @@ GREEN='\033[0;32m';
 YELLOW='\033[1;33m';
 BLANK='\033[0m';
 
-## env
-#read -p ">>> enter corresponding username >>>" target_user;
-#if id -u "$target_user" >/dev/null 2>&1; then
-#    printf "${GREEN}>>> 1. env setup >>>${BLANK}\n";
-#else
-#    exit 1;
-#fi
-#uname_s=$(uname -s)
-#uname_m=$(uname -m)
-
 # env setup
 printf "${GREEN}>>> 1. env setup >>>${BLANK}\n";
 
@@ -27,10 +17,12 @@ sudo apt autoremove -y
 
 printf "${GREEN}<<< 1. env setup completed <<<${BLANK}\n";
 
+
 # pkgs
 printf "${GREEN}>>> 2. installing packages >>>${BLANK}\n";
 sudo apt install docker curl nfs-common preload -y
 printf "${GREEN}<<< 2. packages installed <<<${BLANK}\n";
+
 
 # zsh
 printf "${GREEN}>>> 3. installing cmd environment >>>${BLANK}\n";
@@ -43,6 +35,7 @@ sleep 2
 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 printf "${GREEN}<<< 3. cmd environment installed <<<${BLANK}\n";
+
 
 # language env
 printf "${GREEN}>>> 4. specific env setup >>>${BLANK}\n"
