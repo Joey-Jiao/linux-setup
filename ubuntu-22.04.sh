@@ -34,16 +34,19 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 sleep 2
 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+cp ~/.zshrc ~/.zshrc.copy
+sed -i "s@robbyrussell@powerlevel10k/powerlevel10k@g" ~/.zshrc
+source ~/.zshrc
 printf "${GREEN}<<< 3. cmd environment installed <<<${BLANK}\n";
 
 
 # language env
-printf "${GREEN}>>> 4. specific env setup >>>${BLANK}\n"
-zsh ./ubuntu-22.04-c.sh
-zsh ./ubuntu-22.04-conda.sh
-zsh ./ubuntu-22.04-n.sh
-zsh ./ubuntu-22.04-java.sh
-printf "${GREEN}<<< 4. specific env setup completed <<<${BLANK}\n"
+#printf "${GREEN}>>> 4. specific env setup >>>${BLANK}\n"
+#zsh ./ubuntu-22.04-c.sh
+#zsh ./ubuntu-22.04-conda.sh
+#zsh ./ubuntu-22.04-n.sh
+#zsh ./ubuntu-22.04-java.sh
+#printf "${GREEN}<<< 4. specific env setup completed <<<${BLANK}\n"
 
 
 #sudo reboot
