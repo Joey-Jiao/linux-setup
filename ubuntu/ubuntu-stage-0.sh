@@ -33,3 +33,4 @@ sudo usermod -s /usr/bin/zsh $(whoami)
 printf "${GREEN}<<< 3. cmd environment installed <<<${BLANK}\n";
 
 sudo reboot
+
