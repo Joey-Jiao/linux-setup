@@ -21,3 +21,4 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 # 2. test install conda
 
 echo done
+sudo apt install vim -y
