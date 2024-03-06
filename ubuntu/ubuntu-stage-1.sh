@@ -6,6 +6,7 @@ YELLOW='\033[1;33m';
 BLANK='\033[0m';
 
 printf "${GREEN}>>> 4. customize zsh >>>${BLANK}\n"
+
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 sleep 2
 

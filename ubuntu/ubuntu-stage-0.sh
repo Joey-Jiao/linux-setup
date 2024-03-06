@@ -17,19 +17,17 @@ sudo apt autoremove -y
 
 printf "${GREEN}<<< 1. env setup completed <<<${BLANK}\n";
 
-
 # pkgs
 printf "${GREEN}>>> 2. installing packages >>>${BLANK}\n";
-sudo apt install vim neovim docker curl nfs-common preload -y
+sudo apt install vim neovim docker curl nfs-common preload net-tools -y
 printf "${GREEN}<<< 2. packages installed <<<${BLANK}\n";
-
 
 # zsh
 printf "${GREEN}>>> 3. installing cmd environment >>>${BLANK}\n";
 sudo apt install zsh -y
 sleep 2
-#chsh -s /bin/zsh
-sudo usermod -s /usr/bin/zsh $(whoami)
+chsh -s /bin/zsh
+#sudo usermod -s /usr/bin/zsh $(whoami)
 printf "${GREEN}<<< 3. cmd environment installed <<<${BLANK}\n";
 
 sudo reboot
