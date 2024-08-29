@@ -9,7 +9,7 @@ mkdir ~/repo/conda
 sh Miniforge3-$(uname)-$(uname -m).sh -b -p "~/repo/conda"
 sleep 2
 
-source "~/repo/conda/etc/profile.d/conda.sh"
+source ~/repo/conda/etc/profile.d/conda.sh
 conda init zsh
 conda activate
 conda --version
