@@ -21,7 +21,7 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM
 git clone https://github.com/paulirish/git-open.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/git-open
 
 sed -i "s@plugins=(git)@plugins=(zsh-autosuggestions zsh-syntax-highlighting zsh-history-substring-search git-open git)@g" ~/.zshrc
-source ~.,zshrc
+source ~/.zshrc
 
 printf "${GREEN}<<< 4. customize zsh completed <<<${BLANK}\n"
 
